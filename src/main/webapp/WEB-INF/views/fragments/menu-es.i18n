@@ -18,7 +18,8 @@ master.menu.sign-out = Salir
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo
-master.menu.anonymous.favourite-link = 32099110B:Pino Mateo, Pablo
+master.menu.anonymous.favourite-link1 = 32099110B: Pino Mateo, Pablo
+master.menu.anonymous.favourite-link4 = 17475514E: Merida Bascon, Raul Hernan
 
 # master.menu.administrator ###################################################
 

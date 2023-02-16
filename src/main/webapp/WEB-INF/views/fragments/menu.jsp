@@ -20,9 +20,10 @@
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link1" action="https://book.hacktricks.xyz/"/>
-			<acme:menu-suboption code="master.menu.anonymous.favourite-link2" action="https://book.hacktricks.xyz/"/>
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link2" action="https://www.carmona.org/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link3" action="https://www.google.com//"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link4" action="https://www.realmadrid.com"/>
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link5" action="https://grandwesternsteaks.com/"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">

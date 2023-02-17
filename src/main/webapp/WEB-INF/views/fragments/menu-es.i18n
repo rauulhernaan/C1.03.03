@@ -19,7 +19,12 @@ master.menu.sign-out = Salir
 
 master.menu.anonymous = Anónimo
 master.menu.anonymous.favourite-link1 = 32099110B: Pino Mateo, Pablo
+<<<<<<< HEAD
 master.menu.anonymous.favourite-link2 = 47349483G: Baquero Fernandez, Fernando
+=======
+master.menu.anonymous.favourite-link2 = 47349483G: Baquero Fernández, Fernando
+master.menu.anonymous.favourite-link3 = 77939845K: Cortés Fonseca, Daniel
+>>>>>>> branch 'main' of https://github.com/rauulhernaan/C1.03.03.git
 master.menu.anonymous.favourite-link4 = 17475514E: Merida Bascon, Raul Hernan
 master.menu.anonymous.favourite-link5 = 77930171F: Ribas Luna, Gonzalo
 

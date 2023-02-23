@@ -16,7 +16,7 @@ import lombok.Setter;
 @Setter
 public class Lecturer extends AbstractRole {
 
-	//	 Serialisation identifier -----------------------
+	//	 Serialisation identifier -------------------------
 	protected static final long	serialVersionUID	= 1L;
 
 	//	Attributes --------------------------------------

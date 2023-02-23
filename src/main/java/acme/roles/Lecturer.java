@@ -23,9 +23,11 @@ public class Lecturer extends AbstractRole {
 	@NotBlank
 	@Length(max = 75)
 	protected String			almaMater;
+
 	@NotBlank
 	@Length(max = 100)
 	protected String			resume;
+
 	@NotBlank
 	@Length(max = 100)
 	protected String			qualificationsList;

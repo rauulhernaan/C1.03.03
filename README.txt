@@ -17,6 +17,7 @@ To get this project up and running, please follow the appropriate guideline, tak
 account that you must link the appropriate version of the Acme-Framework excluding the 
 following resources:
 test
+test
 
 - **/fragments/**
  

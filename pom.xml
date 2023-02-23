@@ -22,7 +22,7 @@
 	<description>This is a Hello-World project for the students of Design &amp; Testing.</description>
 
 	<groupId>Acme</groupId>	
-	<artifactId>Acme-L3-D01</artifactId>
+	<artifactId>Acme-L3-D02</artifactId>
 	<version>23.1.0</version>
 	<packaging>war</packaging>
 

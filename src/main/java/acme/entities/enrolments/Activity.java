@@ -1,24 +1,26 @@
 
-package acme.roles;
+package acme.entities.enrolments;
 
-import java.util.List;
+import java.util.Date;
 
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
-import acme.entities.enrolments.Enrolment;
-import acme.framework.data.AbstractRole;
+import acme.framework.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class Student extends AbstractRole {
+public class Activity extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -28,15 +30,22 @@ public class Student extends AbstractRole {
 
 	@NotBlank
 	@Length(max = 75)
-	protected String			statement;
+	protected String			title;
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			strongFeatures;
+	protected String			summary;
 
-	@NotBlank
-	@Length(max = 100)
-	protected String			weakFeatures;
+	@NotNull
+	protected Boolean			isTheory;
+
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date				startDate;
+
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date				endDate;
 
 	@URL
 	protected String			link;
@@ -45,7 +54,7 @@ public class Student extends AbstractRole {
 
 	// Relationships ----------------------------------------------------------
 
-	@OneToMany
-	protected List<Enrolment>	enrolments;
+	@ManyToOne
+	protected Enrolment			enrolment;
 
 }

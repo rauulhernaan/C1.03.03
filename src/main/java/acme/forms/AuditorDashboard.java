@@ -1,9 +1,12 @@
 package acme.forms;
 
+import javax.persistence.Entity;
+
 import acme.framework.data.AbstractForm;
 import lombok.Getter;
 import lombok.Setter;
 
+@Entity
 @Getter
 @Setter
 public class AuditorDashboard extends AbstractForm {

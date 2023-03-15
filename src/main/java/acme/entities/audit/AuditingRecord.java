@@ -1,8 +1,9 @@
+
 package acme.entities.audit;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
-
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
@@ -24,36 +25,36 @@ import lombok.Setter;
 public class AuditingRecord extends AbstractEntity {
 
 	protected static final long	serialVersionUID	= 1L;
-	
+
 	@ManyToOne
-	protected Audit			audit;
-	
+	protected Audit				audit;
+
 	@NotBlank
 	@Length(max = 75)
 	protected String			subject;
-	
+
 	@NotBlank
 	@Length(max = 100)
 	protected String			assessment;
-	
+
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	protected LocalDateTime				startPeriod;
-	
+	protected Date				startPeriod;
+
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	protected LocalDateTime				endPeriod;
-	
+	protected Date				endPeriod;
+
 	@NotNull
-	protected Mark			mark;
-	
+	protected Mark				mark;
+
 	@URL
 	protected String			link;
-	
-	
-	public boolean isPeriodValid(LocalDateTime startPeriod, LocalDateTime endPeriod) {
-	    LocalDateTime now = LocalDateTime.now();
-	    Duration duration = Duration.between(startPeriod, endPeriod);
-	    return endPeriod.isBefore(now) && duration.toHours() >= 1;
+
+
+	public boolean isPeriodValid(final LocalDateTime startPeriod, final LocalDateTime endPeriod) {
+		final LocalDateTime now = LocalDateTime.now();
+		final Duration duration = Duration.between(startPeriod, endPeriod);
+		return endPeriod.isBefore(now) && duration.toHours() >= 1;
 	}
 }

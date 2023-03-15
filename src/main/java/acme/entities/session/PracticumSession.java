@@ -3,6 +3,7 @@ package acme.entities.session;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -15,7 +16,12 @@ import org.hibernate.validator.constraints.URL;
 
 import acme.entities.practicum.Practicum;
 import acme.framework.data.AbstractEntity;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
+@Entity
 public class PracticumSession extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------

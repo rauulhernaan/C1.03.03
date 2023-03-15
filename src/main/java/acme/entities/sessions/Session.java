@@ -29,7 +29,7 @@ public class Session extends AbstractEntity {
 
 	@NotBlank
 	@Length(max = 75)
-	protected String			tittle;
+	protected String			title;
 
 	@NotBlank
 	@Length(max = 100)

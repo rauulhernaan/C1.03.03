@@ -1,5 +1,5 @@
 
-package acme.entities.sessions;
+package acme.entities.offer;
 
 import java.util.Date;
 
@@ -8,18 +8,20 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.PastOrPresent;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.framework.components.datatypes.Money;
 import acme.framework.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity
 @Getter
 @Setter
-public class Session extends AbstractEntity {
+@Entity
+public class Offer extends AbstractEntity {
 
 	//Serialisation identifier-----------------------------------------------
 
@@ -27,24 +29,29 @@ public class Session extends AbstractEntity {
 
 	// Attributes -------------------------------------------------------------
 
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+	@PastOrPresent
+	protected Date				instationMoment;
+
 	@NotBlank
 	@Length(max = 75)
-	protected String			title;
+	protected String			heading;
 
 	@NotBlank
 	@Length(max = 100)
 	protected String			resume;
 
 	@NotNull
-	protected sessionType		sessionType;
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date				startOffer;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	protected Date				startSesion;
+	protected Date				endOffer;
 
 	@NotNull
-	@Temporal(TemporalType.TIMESTAMP)
-	protected Date				finishSesion;
+	protected Money				price;
 
 	@URL
 	protected String			furtherInformation;

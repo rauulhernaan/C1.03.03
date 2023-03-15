@@ -1,13 +1,15 @@
 
-package acme.entities.peeps;
+package acme.entities.note;
 
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
+import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
@@ -19,7 +21,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Peep extends AbstractEntity {
+public class Note extends AbstractEntity {
 
 	//Serialisation identifier-----------------------------------------------
 
@@ -28,16 +30,17 @@ public class Peep extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	@NotNull
-	@Past
-	protected Date				instation;
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date				instationMoment;
 
 	@NotBlank
 	@Length(max = 75)
-	protected String			tittle;
+	protected String			title;
 
 	@NotBlank
 	@Length(max = 75)
-	protected String			nick;
+	@Pattern(regexp = "[A-Z]{1,9}-[A-Z]{1,16},[A-Z]{1,8}")
+	protected String			author;
 
 	@NotBlank
 	@Length(max = 100)
@@ -47,7 +50,7 @@ public class Peep extends AbstractEntity {
 	protected String			email;
 
 	@URL
-	protected String			optionalLink;
+	protected String			link;
 
 	// Derived attributes -----------------------------------------------------
 

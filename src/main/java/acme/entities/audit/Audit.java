@@ -6,6 +6,7 @@ import java.util.Map;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
@@ -13,6 +14,7 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 
 import acme.framework.data.AbstractEntity;
+import acme.roles.Auditor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -23,8 +25,8 @@ public class Audit extends AbstractEntity {
 
 	protected static final long	serialVersionUID	= 1L;
 
-	@OneToMany
-	protected List<AuditingRecord>			records;
+	@ManyToOne
+	protected Auditor 			auditor;
 	
 	@Column(unique = true)
 	@NotBlank
@@ -44,6 +46,9 @@ public class Audit extends AbstractEntity {
 	protected String			weakPoints;
 	
 	protected Mark				mark;
+	
+	@OneToMany
+	protected List<AuditingRecord>			records;
 	
 	public void calculateMark() {
 		

@@ -1,16 +1,13 @@
 
 package acme.roles;
 
-import java.util.List;
-
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
 import javax.validation.constraints.NotBlank;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
-import acme.entities.audit.Audit;
 import acme.framework.data.AbstractRole;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,27 +15,29 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Auditor extends AbstractRole {
+public class Company extends AbstractRole {
+
+	//Serialisation identifier-----------------------------------------------
 
 	protected static final long	serialVersionUID	= 1L;
 
-	@OneToMany
-	protected List<Audit> 		audits;
-	
+	// Attributes -------------------------------------------------------------
+
 	@NotBlank
 	@Length(max = 75)
-	protected String			firm;
+	protected String			name;
 
 	@NotBlank
 	@Length(max = 25)
-	protected String			professionalId;
+	@Column(name = "vat_number")
+	protected String			VATnumber;
 
 	@NotBlank
 	@Length(max = 100)
-	protected String      certifications;
+	protected String			summary;
 
 	@URL
-	protected String 			furtherInformation;
-
+	@Column(name = "further_information")
+	protected String			furtherInformation;
 
 }

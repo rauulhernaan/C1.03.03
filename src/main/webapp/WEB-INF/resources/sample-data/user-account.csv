@@ -1,3 +1,5 @@
 key,enabled,identity,password,username
 user-account-company-01, true, "UserIdentity{name: 'Il', surname: 'Fenomeno', email: 'company1@acme.com'}", company1, company1
 user-account-company-02, true, "UserIdentity{name: 'Kiko', surname: 'Rivera', email: 'company2@acme.com'}",  company2, company2
+user-account-student-01, true, "UserIdentity{name: 'Carlos', surname: 'Baute', email: 'student1@acme.com'}", student1, student1
+user-account-student-02, true, "UserIdentity{name: 'Enrique', surname: 'Iglesias', email: 'student2@acme.com'}",  student2, student2

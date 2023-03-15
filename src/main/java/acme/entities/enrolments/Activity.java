@@ -3,6 +3,7 @@ package acme.entities.enrolments;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
@@ -37,13 +38,16 @@ public class Activity extends AbstractEntity {
 	protected String			summary;
 
 	@NotNull
+	@Column(name = "activity_type")
 	protected ActivityType		activityType;
 
 	@NotNull
+	@Column(name = "start_date")
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date				startDate;
 
 	@NotNull
+	@Column(name = "end_date")
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date				endDate;
 

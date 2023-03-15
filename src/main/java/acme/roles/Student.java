@@ -1,6 +1,7 @@
 
 package acme.roles;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 
@@ -28,10 +29,12 @@ public class Student extends AbstractRole {
 
 	@NotBlank
 	@Length(max = 100)
+	@Column(name = "strong_features")
 	protected String			strongFeatures;
 
 	@NotBlank
 	@Length(max = 100)
+	@Column(name = "weak_features")
 	protected String			weakFeatures;
 
 	@URL

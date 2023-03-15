@@ -1,8 +1,11 @@
 
 package acme.entities.course;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.PositiveOrZero;
@@ -10,6 +13,7 @@ import javax.validation.constraints.PositiveOrZero;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.entities.lecture.Lecture;
 import acme.framework.data.AbstractRole;
 import lombok.Getter;
 import lombok.Setter;
@@ -43,5 +47,8 @@ public class Course extends AbstractRole {
 
 	@URL
 	protected String			link;
+
+	@OneToMany(mappedBy = "course")
+	private List<Lecture>		lectures;
 
 }

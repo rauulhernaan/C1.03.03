@@ -20,7 +20,7 @@ import lombok.Setter;
 @Setter
 @Getter
 @Entity
-public class banner extends AbstractEntity {
+public class Banner extends AbstractEntity {
 
 	private static final long	serialVersionUID	= 1L;
 

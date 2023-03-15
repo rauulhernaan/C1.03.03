@@ -1,0 +1,3 @@
+key,instantiation_moment,heading,resume,start_offer,end_offer,price,further_information
+offer-01,2020/01/01 10:00,Offer01,Esto es una oferta,2020/02/01 11:00,2020/02/02 11:00,EUR 13.0,null
+offer-02,2020/01/01 23:59,Offer02,Esto es una oferta buenisima,2020/03/01 11:00,2020/03/02 11:00,EUR 12.5,null

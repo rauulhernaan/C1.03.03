@@ -9,7 +9,6 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
@@ -39,7 +38,6 @@ public class Note extends AbstractEntity {
 
 	@NotBlank
 	@Length(max = 75)
-	@Pattern(regexp = "[A-Z]{1,9}-[A-Z]{1,16},[A-Z]{1,8}")
 	protected String			author;
 
 	@NotBlank

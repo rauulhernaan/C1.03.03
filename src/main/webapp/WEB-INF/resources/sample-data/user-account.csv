@@ -1,3 +1,9 @@
 key,enabled,identity,password,username
-user-account-company-01, true, "UserIdentity{name: 'Il', surname: 'Fenomeno', email: 'company1@acme.com'}", company1, company1
-user-account-company-02, true, "UserIdentity{name: 'Kiko', surname: 'Rivera', email: 'company2@acme.com'}",  company2, company2
+user-account-company-01,true,"UserIdentity{name: 'Il', surname: 'Fenomeno', email: 'company1@acme.com'}",company1,company1
+user-account-company-02,true,"UserIdentity{name: 'Kiko', surname: 'Rivera', email: 'company2@acme.com'}",company2,company2
+user-account-auditor-01,true,"UserIdentity{name: 'Gorimbu', surname: 'Tamudo', email: 'auditor1@acme.com'}",auditor1,auditor1
+user-account-auditor-02,true,"UserIdentity{name: 'O', surname: 'Bicho', email: 'auditor2@acme.com'}",auditor2,auditor2
+"",,,,
+"",,,,
+"",,,,
+"",,,,

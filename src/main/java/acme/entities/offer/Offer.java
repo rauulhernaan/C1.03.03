@@ -1,23 +1,27 @@
 
-package acme.entities.tutorial;
+package acme.entities.offer;
 
-import javax.persistence.Column;
+import java.util.Date;
+
 import javax.persistence.Entity;
-import javax.validation.constraints.Min;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
+import javax.validation.constraints.PastOrPresent;
 
 import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.URL;
 
+import acme.framework.components.datatypes.Money;
 import acme.framework.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity
 @Getter
 @Setter
-public class Tutorial extends AbstractEntity {
+@Entity
+public class Offer extends AbstractEntity {
 
 	//Serialisation identifier-----------------------------------------------
 
@@ -25,26 +29,32 @@ public class Tutorial extends AbstractEntity {
 
 	// Attributes -------------------------------------------------------------
 
-	@NotBlank
-	@Pattern(regexp = "[A-Z]{1,3}[0-9][0-9]{3}")
-	@Column(unique = true)
-	protected String			code;
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+	@PastOrPresent
+	protected Date				instationMoment;
 
 	@NotBlank
 	@Length(max = 75)
-	protected String			title;
+	protected String			heading;
 
 	@NotBlank
 	@Length(max = 100)
 	protected String			resume;
 
-	@NotBlank
-	@Length(max = 100)
-	protected String			goals;
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date				startOffer;
 
 	@NotNull
-	@Min(value = 0)
-	protected Double			estimatedTime;
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date				endOffer;
+
+	@NotNull
+	protected Money				price;
+
+	@URL
+	protected String			furtherInformation;
 
 	// Derived attributes -----------------------------------------------------
 

@@ -1,14 +1,17 @@
 
-package acme.entities.tutorial;
+package acme.entities.enrolments;
 
-import javax.persistence.Column;
+import java.util.Date;
+
 import javax.persistence.Entity;
-import javax.validation.constraints.Min;
+import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.URL;
 
 import acme.framework.data.AbstractEntity;
 import lombok.Getter;
@@ -17,18 +20,13 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Tutorial extends AbstractEntity {
+public class Activity extends AbstractEntity {
 
-	//Serialisation identifier-----------------------------------------------
+	// Serialisation identifier -----------------------------------------------
 
 	protected static final long	serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
-
-	@NotBlank
-	@Pattern(regexp = "[A-Z]{1,3}[0-9][0-9]{3}")
-	@Column(unique = true)
-	protected String			code;
 
 	@NotBlank
 	@Length(max = 75)
@@ -36,18 +34,27 @@ public class Tutorial extends AbstractEntity {
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			resume;
-
-	@NotBlank
-	@Length(max = 100)
-	protected String			goals;
+	protected String			summary;
 
 	@NotNull
-	@Min(value = 0)
-	protected Double			estimatedTime;
+	protected Boolean			isTheory;
+
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date				startDate;
+
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date				endDate;
+
+	@URL
+	protected String			link;
 
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
+
+	@ManyToOne
+	protected Enrolment			enrolment;
 
 }

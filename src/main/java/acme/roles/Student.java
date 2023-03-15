@@ -1,16 +1,12 @@
 
 package acme.roles;
 
-import java.util.List;
-
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
 import javax.validation.constraints.NotBlank;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
-import acme.entities.enrolments.Enrolment;
 import acme.framework.data.AbstractRole;
 import lombok.Getter;
 import lombok.Setter;
@@ -44,8 +40,5 @@ public class Student extends AbstractRole {
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
-
-	@OneToMany
-	protected List<Enrolment>	enrolments;
 
 }

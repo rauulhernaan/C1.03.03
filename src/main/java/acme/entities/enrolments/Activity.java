@@ -37,7 +37,7 @@ public class Activity extends AbstractEntity {
 	protected String			summary;
 
 	@NotNull
-	protected Boolean			isTheory;
+	protected ActivityType		activityType;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)

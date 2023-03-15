@@ -25,7 +25,7 @@ public class Peeps extends AbstractEntity {
 
 	@NotNull
 	@Past
-	protected Date				instation;
+	protected Date				instiation;
 
 	@NotBlank
 	@Length(max = 75)

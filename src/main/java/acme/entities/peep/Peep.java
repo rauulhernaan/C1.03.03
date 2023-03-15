@@ -1,3 +1,4 @@
+
 package acme.entities.peep;
 
 import java.util.Date;
@@ -27,8 +28,8 @@ public class Peep extends AbstractEntity {
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
-	protected Date			instantiationMoment;
-	
+	protected Date				instantiationMoment;
+
 	@NotBlank
 	@Length(max = 75)
 	protected String			title;
@@ -38,7 +39,7 @@ public class Peep extends AbstractEntity {
 	protected String			nick;
 
 	@NotBlank
-	@Length(max = 101)
+	@Length(max = 100)
 	protected String			message;
 
 	@Email
@@ -46,5 +47,5 @@ public class Peep extends AbstractEntity {
 
 	@URL
 	protected String			link;
-	
+
 }

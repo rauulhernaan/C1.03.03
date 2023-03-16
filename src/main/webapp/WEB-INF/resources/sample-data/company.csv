@@ -1,0 +1,3 @@
+key,key:userAccount,name,vat_number,summary,further_information
+company-01, user-account-company-01, "Los Cachos SL",ESB12345678, Empresa dedicada a reconstruir todo tipo de cosas,null
+company-02, user-account-company-02,"Mercadona SA.",ESA46103834, Empresa dedicada a la venta de alimentos,https://info.mercadona.es/es/conocenos

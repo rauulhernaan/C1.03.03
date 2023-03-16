@@ -11,6 +11,7 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
+import acme.entities.course.Course;
 import acme.framework.data.AbstractEntity;
 import acme.roles.Student;
 import lombok.Getter;
@@ -55,6 +56,9 @@ public class Enrolment extends AbstractEntity {
 
 	// Relationships ----------------------------------------------------------
 
+
+	@ManyToOne
+	protected Course			course;
 
 	@OneToMany
 	protected List<Activity>	activities;

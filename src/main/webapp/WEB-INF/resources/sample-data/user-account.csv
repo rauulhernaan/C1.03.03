@@ -1,0 +1,11 @@
+key,enabled,identity,password,username
+user-account-company-01,true,"UserIdentity{name: 'Il', surname: 'Fenomeno', email: 'company1@acme.com'}",company1,company1
+user-account-company-02,true,"UserIdentity{name: 'Kiko', surname: 'Rivera', email: 'company2@acme.com'}",company2,company2
+user-account-administrator-02,true,"UserIdentity{name: 'Paca', surname: 'Pacheco', email: 'administrator1@acme.com'}",administrator1,administrator1
+user-account-administrator-03,true,"UserIdentity{name: 'Alma', surname: 'Marcela', email: 'administrator2@acme.com'}",administrator2,administrator2
+user-account-auditor-01,true,"UserIdentity{name: 'Gorimbu', surname: 'Tamudo', email: 'auditor1@acme.com'}",auditor1,auditor1
+user-account-auditor-02,true,"UserIdentity{name: 'O', surname: 'Bicho', email: 'auditor2@acme.com'}",auditor2,auditor2
+user-account-student-01,true,"UserIdentity{name: 'Carlos', surname: 'Baute', email: 'student1@acme.com'}",student1,student1
+user-account-student-02,true,"UserIdentity{name: 'Enrique', surname: 'Iglesias', email: 'student2@acme.com'}",student2,student2
+user-account-assistant-01,true,"UserIdentity{name: 'Manuel', surname: 'Mejias', email: 'assistant1@acme.com'}",assistant1,assistant1
+user-account-assistant-02,true,"UserIdentity{name: 'Calle', surname: 'Piripiropi', email: 'assistant2@acme.com'}",assistant2,assistant2

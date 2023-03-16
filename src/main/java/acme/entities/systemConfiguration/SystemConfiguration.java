@@ -1,5 +1,5 @@
 
-package acme.system.configuration;
+package acme.entities.systemConfiguration;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
@@ -20,13 +20,12 @@ public class SystemConfiguration extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	@NotBlank
-	private String				defaultCurrency;
+	protected String			defaultCurrency;
 
 	@NotBlank
-	private String				acceptedCurrencies;
+	protected String			acceptedCurrency;
 
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
-
 }

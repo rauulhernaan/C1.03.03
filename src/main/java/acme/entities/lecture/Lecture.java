@@ -40,4 +40,5 @@ public class Lecture extends AbstractEntity {
 
 	@URL
 	protected String			furtherInformation;
+
 }

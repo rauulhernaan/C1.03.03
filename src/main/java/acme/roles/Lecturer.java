@@ -33,4 +33,5 @@ public class Lecturer extends AbstractRole {
 	protected String			qualificationsList;
 	@URL
 	protected String			link;
+
 }

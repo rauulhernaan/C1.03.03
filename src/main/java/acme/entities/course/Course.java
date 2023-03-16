@@ -12,7 +12,9 @@ import javax.validation.constraints.PositiveOrZero;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+
 import acme.framework.data.AbstractEntity;
+
 import acme.roles.Lecturer;
 import lombok.Getter;
 import lombok.Setter;

@@ -13,6 +13,7 @@ import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 
+import acme.entities.course.Course;
 import acme.framework.data.AbstractEntity;
 import acme.roles.Auditor;
 import lombok.Getter;
@@ -33,6 +34,9 @@ public class Audit extends AbstractEntity {
 	@Pattern(regexp = "[A-Z]{1,3}[0-9][0-9]{3}")
 	protected String			code;
 	
+	@ManyToOne
+	protected Course			course;
+	
 	@NotBlank
 	@Length(max = 100)
 	protected String			conclusion;
@@ -45,12 +49,11 @@ public class Audit extends AbstractEntity {
 	@Length(max = 100)
 	protected String			weakPoints;
 	
-	protected Mark				mark;
 	
 	@OneToMany
 	protected List<AuditingRecord>			records;
 	
-	public void calculateMark() {
+	public Mark calculateMark() {
 		
 		Map<Mark, Integer> markCounts = new HashMap<>();
 	    for (AuditingRecord record : this.records) {
@@ -73,6 +76,6 @@ public class Audit extends AbstractEntity {
 	        }
 	    }
 	    
-	    this.mark = mode;
+	    return mode;
 	}
 }

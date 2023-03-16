@@ -1,8 +1,6 @@
 
 package acme.entities.audit;
 
-import java.time.Duration;
-import java.time.LocalDateTime;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -15,7 +13,6 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
-import acme.entities.course.Course;
 import acme.framework.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -29,9 +26,7 @@ public class AuditingRecord extends AbstractEntity {
 
 	@ManyToOne
 	protected Audit				audit;
-	
-	@ManyToOne
-	protected Course			course;
+
 
 	@NotBlank
 	@Length(max = 75)
@@ -55,10 +50,11 @@ public class AuditingRecord extends AbstractEntity {
 	@URL
 	protected String			link;
 
-
+	/*
 	public boolean isPeriodValid(final LocalDateTime startPeriod, final LocalDateTime endPeriod) {
 		final LocalDateTime now = LocalDateTime.now();
 		final Duration duration = Duration.between(startPeriod, endPeriod);
 		return endPeriod.isBefore(now) && duration.toHours() >= 1;
 	}
+	*/
 }

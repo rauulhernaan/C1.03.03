@@ -32,7 +32,7 @@ public class Offer extends AbstractEntity {
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	@PastOrPresent
-	protected Date				instationMoment;
+	protected Date				instantiationMoment;
 
 	@NotBlank
 	@Length(max = 75)

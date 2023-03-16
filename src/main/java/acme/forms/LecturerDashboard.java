@@ -1,15 +1,13 @@
 
 package acme.forms;
 
-import javax.persistence.Entity;
-
+import acme.framework.data.AbstractForm;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-@Entity
-public class LecturerDashboard {
+public class LecturerDashboard extends AbstractForm {
 
 	protected static final long	serialVersionUID	= 1L;
 

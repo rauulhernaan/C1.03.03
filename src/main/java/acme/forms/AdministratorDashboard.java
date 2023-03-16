@@ -15,7 +15,7 @@ public class AdministratorDashboard extends AbstractForm {
 
 	private Map<String, Integer>	totalNumberOfPrincipalsForRole;
 	private Double					emailAndLinkPeepsRatio;
-	private Map<Boolean, Double>	criticalBulletinRatio;
+	private Double					criticalBulletinRatio;
 	private Map<String, Double>		minimunOfTheBudgetOffers;
 	private Map<String, Double>		maximunOfTheBudgetOffers;
 	private Map<String, Double>		averageOfTheBudgetOffers;

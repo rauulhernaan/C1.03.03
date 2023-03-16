@@ -7,9 +7,10 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
+
+import org.hibernate.validator.constraints.Length;
 
 import acme.entities.course.Course;
 import acme.framework.data.AbstractEntity;
@@ -34,11 +35,11 @@ public class Enrolment extends AbstractEntity {
 	protected String			code;
 
 	@NotBlank
-	@Max(value = 75)
+	@Length(max = 75)
 	protected String			motivation;
 
 	@NotBlank
-	@Max(value = 100)
+	@Length(max = 100)
 	protected String			goals;
 
 	// Derived attributes -----------------------------------------------------

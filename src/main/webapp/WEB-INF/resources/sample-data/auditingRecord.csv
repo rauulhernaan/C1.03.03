@@ -1,3 +1,3 @@
-key, key:audit, key:course, subject,assessment,startPeriod,endPeriod,mark,link
-auditingRecord-01, audit-01, course-01, English, "First evaluation", 20/02/2023,30/02/2023,A_PLUS,null
-auditingRecord-02, audit-02, course-02, Maths, "Second evaluation", 10/01/2023,30/01/2023,B,null
+key,key:audit,key:course,subject,assessment,startPeriod,endPeriod,mark,link
+auditingRecord-01,audit-01,course-01,English,"First evaluation",2023/02/20 11:20,2023/02/22 11:25,A_PLUS,null
+auditingRecord-02,audit-02,course-02,Maths,"Second evaluation",2023/01/10 23:59,2023/01/30 23:59,B,null

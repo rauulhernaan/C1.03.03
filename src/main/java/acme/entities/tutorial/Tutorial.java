@@ -39,7 +39,7 @@ public class Tutorial extends AbstractEntity {
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			resume;
+	protected String			abstract$;
 
 	@NotBlank
 	@Length(max = 100)

@@ -11,4 +11,3 @@ user-account-lecturer-01,true,"UserIdentity{name: 'Cristiano', surname: 'Ronaldo
 user-account-lecturer-02,true,"UserIdentity{name: 'Cristiana', surname: 'Ronalda', email: 'lecturer2@acme.com'}",lecturer2,lecturer2
 user-account-assistant-01,true,"UserIdentity{name: 'Manuel', surname: 'Mejias', email: 'assistant1@acme.com'}",assistant1,assistant1
 user-account-assistant-02,true,"UserIdentity{name: 'Calle', surname: 'Piripiropi', email: 'assistant2@acme.com'}",assistant2,assistant2
-

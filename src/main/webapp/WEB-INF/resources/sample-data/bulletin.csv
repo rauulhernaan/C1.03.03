@@ -1,0 +1,3 @@
+key,instantiation_moment,title,message,critical,further_information
+bulletin-01,2020/1/1 11:20,Popopo,Este es el primer bulletin,true,https://github.com/ferbaqfer/Acme-L3-D02
+bulletin-02,2020/1/1 11:59,Seriedad,Este es el segundo bulletin,true,null

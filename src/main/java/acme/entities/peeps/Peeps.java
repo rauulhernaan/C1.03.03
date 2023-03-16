@@ -1,4 +1,3 @@
-
 package acme.entities.peeps;
 
 import java.util.Date;
@@ -19,17 +18,14 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Peep extends AbstractEntity {
-
-	//Serialisation identifier-----------------------------------------------
+public class Peeps extends AbstractEntity {
 
 	protected static final long	serialVersionUID	= 1L;
 
-	// Attributes -------------------------------------------------------------
 
 	@NotNull
 	@Past
-	protected Date				instation;
+	protected Date				instiation;
 
 	@NotBlank
 	@Length(max = 75)
@@ -48,9 +44,5 @@ public class Peep extends AbstractEntity {
 
 	@URL
 	protected String			optionalLink;
-
-	// Derived attributes -----------------------------------------------------
-
-	// Relationships ----------------------------------------------------------
 
 }

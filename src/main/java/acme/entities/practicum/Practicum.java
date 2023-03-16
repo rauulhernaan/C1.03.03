@@ -1,26 +1,27 @@
 
-package acme.entities.enrolments;
-
-import java.util.List;
+package acme.entities.practicum;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.validation.constraints.Max;
+import javax.validation.Valid;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
+
+import org.hibernate.validator.constraints.Length;
 
 import acme.entities.course.Course;
 import acme.framework.data.AbstractEntity;
-import acme.roles.Student;
+import acme.roles.Company;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class Enrolment extends AbstractEntity {
+public class Practicum extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -28,42 +29,41 @@ public class Enrolment extends AbstractEntity {
 
 	// Attributes -------------------------------------------------------------
 
-	@NotBlank
 	@Column(unique = true)
+	@NotBlank
 	@Pattern(regexp = "[A-Z]{1,3}[0-9][0-9]{3}")
 	protected String			code;
 
 	@NotBlank
-	@Max(value = 75)
-	protected String			motivation;
+	@Length(max = 75)
+	protected String			title;
 
 	@NotBlank
-	@Max(value = 100)
+	@Length(max = 100)
+	protected String			abstractPracticum;
+
+	@NotBlank
+	@Length(max = 100)
 	protected String			goals;
+
+	@Min(1)
+	protected Integer			estimatedTotalTime;
 
 	// Derived attributes -----------------------------------------------------
 
-
-	public Double workTime() {
-		double res = 0;
-		for (final Activity activity : this.activities) {
-			final long activityTime = Math.abs(activity.getEndDate().getTime() - activity.getStartDate().getTime());
-			final double activityTimeInHours = activityTime / 3600000;
-			res += activityTimeInHours;
-		}
-		return res;
-	}
+	//	@Min(1)
+	//	protected Integer			estimatedTotalTime;
 
 	// Relationships ----------------------------------------------------------
 
-
-	@ManyToOne
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
 	protected Course			course;
 
-	@OneToMany
-	protected List<Activity>	activities;
-
-	@ManyToOne
-	protected Student			student;
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	protected Company			company;
 
 }

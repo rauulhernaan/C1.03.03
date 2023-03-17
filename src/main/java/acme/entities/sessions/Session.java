@@ -42,11 +42,11 @@ public class Session extends AbstractEntity {
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	protected Date				startSesion;
+	protected Date				startSession;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	protected Date				finishSesion;
+	protected Date				finishSession;
 
 	@URL
 	protected String			furtherInformation;
